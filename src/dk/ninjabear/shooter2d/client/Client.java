@@ -167,7 +167,7 @@ public class Client extends Application {
         joinRoot.setHgap(5);
         int row = 0;
         joinRoot.add(new Label("Playername:"), 0, row);
-        TextField joinPlayername = new TextField("ash");
+        TextField joinPlayername = new TextField("Player1");
         joinRoot.add(joinPlayername, 1, row);
         row++;
         joinRoot.add(new Label("Port:"), 0, row);
@@ -210,7 +210,7 @@ public class Client extends Application {
 
         row++;
         joinRoot.add(new Label("Servername:"), 0, row);
-        TextField serverNameText = new TextField("My Server");
+        TextField serverNameText = new TextField("Server1");
         joinRoot.add(serverNameText, 1, row);
         row++;
         joinRoot.add(new Label("Number of Bots:"), 0, row);
