@@ -11,7 +11,7 @@ If running on a dedicated machine the server can be run by calling the main meth
 There are a few interesting algorithms used in this game.
 
 ### A* algorithm
-The AI uses A* algorithm to find the nearest player.
+The AI uses a [A* search algorithm](https://en.wikipedia.org/wiki/A*_search_algorithm) to find a path to the nearest player.
 
 ### Map algorithm
 It uses a map algorithm to check that a board has no pockets that a player could be trapped in when joining the game.
