@@ -7,8 +7,8 @@ If running on a dedicated machine the server can be run by calling the main meth
 
 ## Protocol
 ### Joining
-- A client opens a connection to the game and sendes: **"\<playername\>"**
-- if <playername> is illegal the server replys: **"rejected"**
+- A client opens a connection to the game and just sends the wanted name: **"\<playername\>"**
+- if **<playername>** is illegal, for example in use or a reserved command, the server replys: **"rejected"**
 - else the server sends the board in a serialized state, a list of serialized players.
 - The server then informs all connected clients that a new player has joined: **"joined:\<playername\>"**
 
