@@ -6,6 +6,22 @@ The main way to run the game is to run the main method in the Client class. It w
 If running on a dedicated machine the server can be run by calling the main method in the ServerConsoleMain class. It will write the log to log.txt instead of to the console.
 
 ## Protocol
+### Joining
+- A client opens a connection to the game and sendes: **"\<playername\>"**
+- if <playername> is illegal the server replys: **"rejected"**
+- else the server sends the board in a serialized state, a list of serialized players.
+- The server then informs all connected clients that a new player has joined: **"joined:\<playername\>"**
+
+### Leaving
+- The client closes the connection and the server informs all connected clients: **"left:\<playername\>"**
+
+### Moving
+- The client sends: **"move:\<direction\>"**
+- If the move is legal, the server informs all connected clients: **"move:\<playername\>:\<x\>:\<y\>:\<direction\>"**
+
+### Shooting
+- The client simply sends **"shoot"**
+- The server updates the players new points if any players are hit.<br>The server informs all connected clients: **"shot:\<playername\>:\<playerpoints\>"**
 
 ## Algorithms
 There are a few interesting algorithms used in this game.
