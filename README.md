@@ -1,5 +1,5 @@
 # Shooter2D
-This is a small network game, it is not intended to be played but to explore networking with sockets in java and a few fun algorithms.
+This is a small network game, it is not intended to be played but to explore networking with sockets in java and a few fun algorithms. [screenshot](screenshot.png)
 
 ## Running the game
 The main way to run the game is to run the main method in the Client class. It will open a selection window where you can either join a game or create your own server with a number of bots and join that.
