@@ -160,7 +160,7 @@ public class Client extends Application {
                 addressHistory.addAll(Files.readAllLines(Paths.get(addressHistoryFile)));
         } catch (IOException ioe) {ioe.printStackTrace();}
 
-        primaryStage.setTitle("Networkgame");
+        primaryStage.setTitle("Shooter2D");
         GridPane joinRoot = new GridPane();
         joinRoot.setPadding(new Insets(10));
         joinRoot.setVgap(5);
