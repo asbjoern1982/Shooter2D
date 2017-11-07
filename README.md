@@ -14,7 +14,7 @@ There are a few interesting algorithms used in this game.
 The AI uses a [A* search algorithm](https://en.wikipedia.org/wiki/A*_search_algorithm) to find a path to the nearest player.
 
 ### Map algorithm
-It uses a map algorithm to check that a board has no pockets that a player could be trapped in when joining the game.
+The server generates a random map and uses a map algorithm to check that a board has no pockets that a player could be trapped in when joining the game, it continues to generates map till it creates one with no pockets.
 pseudo code:
 1. get first tile that starts with f
 2. color all surrounding tiles with f
