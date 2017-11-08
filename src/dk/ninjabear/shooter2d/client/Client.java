@@ -214,7 +214,7 @@ public class Client extends Application {
         joinRoot.add(serverNameText, 1, row);
         row++;
         joinRoot.add(new Label("Number of Bots:"), 0, row);
-        TextField serverBots = new TextField("2");
+        TextField serverBots = new TextField("1");
         joinRoot.add(serverBots, 1, row);
         row++;
 
@@ -267,6 +267,9 @@ public class Client extends Application {
             int boardHeight = Integer.parseInt(heightSrt);
 
             server = new Server(serverNameText.getText(), port, 4, boardWidth, boardHeight, null);
+            try {
+                Thread.sleep(50);
+            } catch (InterruptedException e1) {}
             for (int i = 0; i < numberOfBots; i++)
                 new PathfindingAi("localhost", port);
 

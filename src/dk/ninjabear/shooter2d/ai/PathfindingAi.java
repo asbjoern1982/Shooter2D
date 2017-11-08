@@ -13,7 +13,7 @@ import java.net.Socket;
 import java.util.*;
 
 public class PathfindingAi {
-    //public static void main(String[] args) {new PathfindingAi("localhost", 5001);}
+    public static void main(String[] args) {new PathfindingAi("localhost", 5001);}
 
     private final List<Player> players = new ArrayList<>();
     private String myName;
@@ -155,7 +155,7 @@ public class PathfindingAi {
 
 
 
-            if (nearestPlayer != null) {
+            if (nearestPlayer != null && Math.random() > 0.1) {
                 Direction[] path = a_star(me.getX(), me.getY(), nearestPlayer.getX(), nearestPlayer.getY());
                 move(me, path[0]);
             } else {
